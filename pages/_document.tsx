@@ -84,9 +84,9 @@ MyDocument.getInitialProps = async (ctx: DocumentContext) => {
           React.ComponentProps<AppType> & AppPropsWithLayout
         >
       ) =>
-        function EnhanceApp(props) {
+        (function EnhanceApp(props) {
           return <App emotionCache={cache} {...props} />;
-        },
+        }),
     });
 
   const initialProps = await Document.getInitialProps(ctx);

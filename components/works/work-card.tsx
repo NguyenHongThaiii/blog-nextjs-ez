@@ -1,6 +1,6 @@
 import { Work } from "@/models";
 import { Box, Chip, Stack, Typography } from "@mui/material";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import * as React from "react";
 
 export interface WorkCardProps {

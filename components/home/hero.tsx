@@ -1,6 +1,6 @@
 import * as React from "react";
 import { Box, Button, Container, Stack, Typography } from "@mui/material";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import avatar from "@/images/avatar.png";
 
 export interface IHeroProps {}

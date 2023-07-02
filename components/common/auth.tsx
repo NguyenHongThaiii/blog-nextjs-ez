@@ -8,6 +8,7 @@ interface AuthProps {
 
 export function Auth({ children }: AuthProps) {
   const { profile, loading } = useAuth();
+
   const router = useRouter();
 
   useEffect(() => {
