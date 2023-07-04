@@ -6,7 +6,8 @@ import { CacheProvider } from "@emotion/react";
 import { CssBaseline, ThemeProvider } from "@mui/material";
 import { axiosClient } from "api-client";
 import { SWRConfig } from "swr";
-
+import "../styles/globals.css"
+import "../styles/prism.css"
 const clientSideEmotionCache = createEmotionCache();
 
 function MyApp(props: AppPropsWithLayout) {
