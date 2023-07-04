@@ -16,14 +16,6 @@ export interface BlogListPageProps {
 }
 
 export default function BlogListPage({ posts }: BlogListPageProps) {
-  const [state, setState] = useState("")
-  const handleChange = (e: any) => {
-    setState(() => {
-      console.log("inside");
-      return e.target.value
-    })
-    console.log("outside");
-  }
   return (
     <Box>
       <Container>
@@ -43,7 +35,6 @@ export default function BlogListPage({ posts }: BlogListPageProps) {
 
       </Container>
 
-      <input onChange={handleChange} />
     </Box>
   );
 }

@@ -13,7 +13,7 @@ const Home: NextPageWithLayout = () => {
           title: "NextJS Tutorials | Easy Frontend",
           description:
             "Step by step tutorials to build a full CRUD website using NextJS for beginners",
-          url: "https://blog-nextjs-ez-ppem.vercel.app/",
+          url: process.env.HOST_URL || "https://blog-nextjs-ez-ppem.vercel.app/",
           thumbnailUrl:
             "https://cdn.getshifter.co/caa65008efb706a8bfc6f7e4045d6a018420c3df/uploads/2020/11/nextjs.png",
         }}

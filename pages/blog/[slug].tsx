@@ -15,6 +15,8 @@ import { Box } from '@mui/material'
 import { unified } from 'unified'
 import { Seo } from '@/components/common'
 import remarkParse from 'remark-parse'
+import { MainLayout } from '@/components/layout'
+import { DEFAULT_THUMBNAIL_URL } from '@/utils/constant'
 
 export interface BlogPageProps {
     post: Post
@@ -32,7 +34,7 @@ export default function PostDetailPage({ post }: BlogPageProps) {
                     url: `${process.env.HOST_URL}/blog/${post.slug}`,
                     thumbnailUrl:
                         post.thumbnailUrl ||
-                        'https://cdn.getshifter.co/caa65008efb706a8bfc6f7e4045d6a018420c3df/uploads/2020/11/nextjs.png',
+                        DEFAULT_THUMBNAIL_URL,
                 }}
             />
 
@@ -47,6 +49,7 @@ export default function PostDetailPage({ post }: BlogPageProps) {
         </Box>
     )
 }
+PostDetailPage.Layout = MainLayout;
 
 export const getStaticPaths: GetStaticPaths = async () => {
     const postList = await getPostList()
