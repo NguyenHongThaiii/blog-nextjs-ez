@@ -34,7 +34,7 @@ export function useAuth(options?: Partial<SWRConfiguration>) {
     },
   });
 
-  const firstLoading = profile === undefined && error === undefined;
+  const loading = profile === undefined && error === undefined;
 
   async function login(payload: LoginPayload) {
     await authApi.login(payload);
@@ -53,6 +53,6 @@ export function useAuth(options?: Partial<SWRConfiguration>) {
     error,
     login,
     logout,
-    firstLoading,
+    loading,
   };
 }
