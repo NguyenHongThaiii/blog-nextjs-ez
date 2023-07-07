@@ -1,6 +1,6 @@
 import { axiosClient } from "./axios-client";
 
-const authApi = {
+export const authApi = {
   login(data: any) {
     const url = "/login";
     return axiosClient.post(url, data);
@@ -13,5 +13,3 @@ const authApi = {
     return axiosClient.get("/profile");
   },
 };
-
-export default authApi;

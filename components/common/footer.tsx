@@ -23,14 +23,14 @@ export function Footer() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            
-            <Icon component={item.icon} sx={{ fontSize: 48, color:"black" }} />
+
+            <Icon component={item.icon} sx={{ fontSize: 48, color: "black" }} />
           </Box>
         ))}
       </Stack>
-          
 
-          
+
+
       <Typography>
         Copyright ©{new Date().getFullYear()} All rights reserved
       </Typography>

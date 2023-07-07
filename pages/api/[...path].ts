@@ -15,7 +15,7 @@ export default function handler(
   req: NextApiRequest,
   res: NextApiResponse<Data>
 ) {
-  return new Promise((resolve) => {
+  return new Promise(() => {
     const cookies = new Cookies(req, res);
     const accessToken = cookies.get("auth_token");
     if (accessToken) {
